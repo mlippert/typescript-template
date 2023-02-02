@@ -1,0 +1,15 @@
+[bugtraq "github-issue"]
+	url = https://github.com/mlippert/typescript-template/issues/%BUGID%
+	logfilterregex = "[Ii]ssues?:?((?:\\s*(?:,|and)?\\s*#\\d+)+)"
+	loglinkregex = "(#\\d+)"
+	logregex = "(\\d+)"
+
+[bugtraq "github-pr"]
+	url = https://github.com/mlippert/typescript-template/pull/%BUGID%
+	logfilterregex = "PR[ :]?(\\s*#\\d+)"
+	loglinkregex = "(#\\d+)"
+	logregex = "(\\d+)"
+
+[bugtraq "jira"]
+    url = https://riffanalytics.atlassian.net/browse/%BUGID%
+    logregex = (RA-\\d+)
