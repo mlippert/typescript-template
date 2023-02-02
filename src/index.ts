@@ -12,4 +12,8 @@
  *
  * ******************************************************************************/
 
-console.log('Hello World');
+import bunyan from 'bunyan';
+import config from 'config';
+
+const log = bunyan.createLogger({ name: 'myapp' });
+log.info(config.get('hello'));
