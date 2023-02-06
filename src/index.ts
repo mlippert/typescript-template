@@ -12,8 +12,8 @@
  *
  * ******************************************************************************/
 
-import bunyan from 'bunyan';
 import config from 'config';
 
-const log = bunyan.createLogger({ name: 'myapp' });
-log.info(config.get('hello'));
+import { logger } from './utils/logger.js';
+
+logger.info(config.get('hello'));

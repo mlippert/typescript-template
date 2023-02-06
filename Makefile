@@ -17,6 +17,7 @@ GIT_TAG_VERSION = $(shell git describe)
 LINT = ./node_modules/.bin/eslint
 STYLELINT = ./node_modules/.bin/stylelint
 TSC = ./node_modules/.bin/tsc
+BUNYAN = ./node_modules/.bin/bunyan
 
 LINT_LOG = logs/lint.log
 
@@ -60,7 +61,7 @@ lint-ci: ## run stylelint and lint for CI (fail if there are errors)
 	$(LINT) $(LINT_OPTIONS) --format $(LINT_FORMAT) src
 
 run : ## run the app (npm start)
-	npm start
+	npm start | $(BUNYAN)
 
 run-dev : ## run the app for development (using nodemon to rerun as sources are modified)
 	npm run start:dev

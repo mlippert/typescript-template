@@ -1,2 +1,7 @@
 ---
 hello: Hello World!
+log:
+  name: myapp
+  level: info
+  streams:
+    - stream: stdout
